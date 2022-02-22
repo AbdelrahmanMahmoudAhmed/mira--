@@ -107,6 +107,11 @@
 				</div>
 			</div>
 		</div>
+		<div class="back-button">
+			<button>
+				<router-link to="/products">back to products</router-link>
+			</button>
+		</div>
 	</div>
 	<div class="popup-holder">
 		<div class="popup">
@@ -239,6 +244,8 @@ export default {
 </script>
 
 <style lang="scss">
+.just-product {
+}
 .product-content {
 	display: flex;
 	gap: 50px;
@@ -518,6 +525,39 @@ export default {
 		}
 		.product-holder-content {
 			width: 100%;
+		}
+	}
+}
+.back-button {
+	width: fit-content;
+	margin: 50px auto;
+	> button {
+		background-color: #414141;
+		border: 1px solid #414141;
+
+		display: block;
+
+		height: 40px;
+
+		margin-bottom: 10px;
+		padding: 6px 40px;
+		text-align: center;
+		text-transform: uppercase;
+		transition: all 0.3s ease 0s;
+		cursor: pointer;
+		a {
+			color: #fff;
+			font-size: 12px;
+			font-weight: 400;
+			letter-spacing: 0.5px;
+			line-height: 24px;
+		}
+		&:hover {
+			a {
+				color: #414141;
+			}
+
+			background-color: #fff;
 		}
 	}
 }

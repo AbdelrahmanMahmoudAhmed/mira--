@@ -19,11 +19,9 @@ export default createStore({
   },
   mutations: {
     myProducts(state, payload) {
-      if (typeof payload != "number") {
-        state.myProducts.push(payload)
-      } else {
-        console.log(payload)
-      }
+
+      state.myProducts.push(payload)
+
       updateLocalStorage(state.myProducts)
     },
     deleteProduct(state, payload) {
